@@ -1,0 +1,446 @@
+:root {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: #f4f7fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+.app-shell {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.app-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.app-title-logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.composer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 18px;
+  align-items: start;
+}
+
+.editor-panel,
+.side-panel,
+.preview-panel,
+.saved-panel {
+  background: #ffffff;
+  border: 1px solid #e6ecf5;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+  margin-bottom: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d6deeb;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.bill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.bill-grid h4 {
+  margin: 0 0 8px;
+}
+
+.bill-grid input {
+  margin-bottom: 8px;
+}
+
+.items-table {
+  margin-top: 12px;
+}
+
+.items-head,
+.item-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px 120px 60px;
+  gap: 10px;
+  align-items: start;
+}
+
+.items-head {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #4b5563;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.item-row {
+  padding-top: 10px;
+}
+
+.item-row > div input:first-child {
+  margin-bottom: 8px;
+}
+
+.icon-btn {
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #1976ff;
+  border-color: #1976ff;
+  color: #fff;
+}
+
+.btn-outline {
+  background: #fff;
+  border-color: #1976ff;
+  color: #1976ff;
+}
+
+.btn-ghost {
+  background: #f8fbff;
+  border-color: #d9e7ff;
+  color: #1f2937;
+}
+
+.add-btn {
+  margin-top: 12px;
+}
+
+.editor-totals {
+  margin-top: 16px;
+  margin-left: auto;
+  max-width: 340px;
+}
+
+.editor-totals p,
+.preview-totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.editor-totals .final,
+.preview-totals .final {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.notes {
+  margin-top: 14px;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 12px;
+}
+
+.percent-input {
+  display: grid;
+  grid-template-columns: 1fr 32px;
+  gap: 8px;
+}
+
+.percent-input span {
+  border: 1px solid #d6deeb;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: #f8fbff;
+}
+
+.side-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.preview-panel {
+  margin-top: 16px;
+}
+
+.preview-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.preview-modal {
+  width: min(1000px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e6ecf5;
+  padding: 16px;
+}
+
+.preview-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.preview-modal-head h3 {
+  margin: 0;
+}
+
+.preview-modal .preview-panel {
+  margin-top: 0;
+}
+
+.preview-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 14px;
+}
+
+.preview-top h2 {
+  margin: 0;
+}
+
+.preview-top p {
+  margin: 4px 0 0;
+}
+
+.amount-due {
+  text-align: right;
+}
+
+.amount-due strong {
+  display: block;
+  font-size: 34px;
+}
+
+.preview-meta {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 12px;
+}
+
+.preview-meta h4 {
+  margin: 0 0 8px;
+}
+
+.preview-meta p {
+  margin: 0 0 4px;
+}
+
+.preview-table {
+  margin-top: 14px;
+}
+
+.preview-head,
+.preview-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 150px 150px;
+  gap: 8px;
+}
+
+.preview-head {
+  border-bottom: 1px solid #eef2f7;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.preview-row {
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f5f9;
+}
+
+.preview-totals {
+  margin-top: 16px;
+  margin-left: auto;
+  max-width: 320px;
+}
+
+.preview-notes {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.saved-panel {
+  margin-top: 16px;
+}
+
+.saved-list {
+  display: grid;
+  gap: 10px;
+}
+
+.saved-card {
+  border: 1px solid #e9eef7;
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.saved-card h4 {
+  margin: 0 0 4px;
+}
+
+.saved-card p {
+  margin: 0;
+}
+
+.saved-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.pdf-render-shell {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 210mm;
+  background: #ffffff;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .composer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .bill-grid,
+  .meta-row,
+  .preview-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .items-head {
+    display: none;
+  }
+
+  .item-row {
+    grid-template-columns: 1fr;
+    border: 1px solid #eef2f7;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .preview-head,
+  .preview-row {
+    grid-template-columns: 56px 1fr 92px 92px;
+    font-size: 13px;
+  }
+
+  .amount-due strong {
+    font-size: 26px;
+  }
+
+  .saved-card {
+    grid-template-columns: 1fr;
+  }
+}
+
